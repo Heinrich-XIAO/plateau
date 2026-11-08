@@ -1,4 +1,4 @@
-# video-grey
+# plateau
 
 Turns the macOS greyscale color filter on while video is playing, and off shortly after it stops. Audio-only playback is ignored.
 
@@ -6,7 +6,7 @@ Turns the macOS greyscale color filter on while video is playing, and off shortl
 
     ./install.sh
 
-Runs at login as a LaunchAgent (`com.user.video-grey`). Remove with `./install.sh uninstall`.
+Runs at login as a LaunchAgent (`com.user.plateau`). Remove with `./install.sh uninstall`.
 
 ## How it works
 

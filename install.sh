@@ -2,15 +2,15 @@
 # Usage: ./install.sh [uninstall]
 set -euo pipefail
 here="$(cd "$(dirname "$0")" && pwd)"
-label=com.user.video-grey
+label=com.user.plateau
 plist="$HOME/Library/LaunchAgents/$label.plist"
-bin="$HOME/.local/bin/video-grey"
+bin="$HOME/.local/bin/plateau"
 
 launchctl bootout "gui/$(id -u)/$label" 2>/dev/null || true
 if [ "${1:-}" = uninstall ]; then rm -f "$plist" "$bin"; echo "uninstalled"; exit 0; fi
 
 mkdir -p "$(dirname "$bin")" "$(dirname "$plist")"
-swiftc -O "$here/video-grey.swift" -o "$bin"
+swiftc -O "$here/plateau.swift" -o "$bin"
 cat > "$plist" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">

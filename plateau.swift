@@ -1,4 +1,4 @@
-// video-grey: turn the macOS greyscale color filter on while video plays.
+// plateau: turn the macOS greyscale color filter on while video plays.
 //
 // Video detection: video players and browsers hold a "PreventUserIdleDisplaySleep"
 // power assertion while video is playing. Audio-only playback holds only
